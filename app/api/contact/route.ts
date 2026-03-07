@@ -31,8 +31,10 @@ export async function POST(req: Request) {
         </div>
       `,
     });
+    console.log('✅ Mail do Zeniuli WYSŁANY');
 
     // Mail 2: DO KLIENTA (potwierdzenie)
+    console.log('📤 Wysyłam do klienta:', { to: email });
     await resend.emails.send({
       from: 'Zeniula UGC <onboarding@resend.dev>',
       to: email,
@@ -51,16 +53,10 @@ export async function POST(req: Request) {
           </p>
         </div>
       `,
-      console.log(`Wysyłam do Zeniuli: ${name} <${email}>`);
-      await resend.emails.send({ /* Zeniula */ });
-      console.log('✅ Zeniula wysłana');
-      
-      console.log(`Wysyłam do klienta: ${email}`);
-      await resend.emails.send({ /* Klient */ });
-      console.log('✅ Klient wysłany');
     });
-
+    console.log('✅ Mail do klienta WYSŁANY');
     
+    console.log('🎉 Oba maile wysłane pomyślnie!');
     return NextResponse.json({ ok: true, message: 'Wiadomość wysłana! Dziękujemy.' });
   } catch (error) {
     console.error('Resend error:', error);
