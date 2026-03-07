@@ -238,34 +238,4 @@ export const portfolioItems: PortfolioItem[] = [
     videoUrl: 'https://player.vimeo.com/video/1169341166',
     videoType: 'vimeo',
   },
-  {
-    id: 4,
-    title: 'Morning Routine',
-    brand: 'Skincare brand',
-    type: 'Lifestyle',
-    image:
-      'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80',
-    videoUrl: null,
-    videoType: null,
-  },
-  {
-    id: 5,
-    title: 'Haul Video',
-    brand: 'E-commerce',
-    type: 'Unboxing',
-    image:
-      'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&q=80',
-    videoUrl: null,
-    videoType: null,
-  },
-  {
-    id: 6,
-    title: 'Tutorial',
-    brand: 'Beauty brand',
-    type: 'How-to',
-    image:
-      'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80',
-    videoUrl: null,
-    videoType: null,
-  },
 ];
