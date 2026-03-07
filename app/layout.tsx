@@ -9,17 +9,17 @@ export const metadata: Metadata = {
   title: 'Zeniula | UGC Creator Polska - Beauty Lifestyle Fashion',
   description: 'Autentyczne treści UGC dla marek beauty, lifestyle, fashion. Unboxing, recenzje, TikTok/Instagram Reels. Polska UGC Creator.',
   keywords: 'UGC creator Polska, content creator beauty, UGC fashion Polska, unboxing kosmetyki, recenzje produktów',
-  metadataBase: new URL('https://zeniula.pl'),
+  metadataBase: new URL('https://www.zeniula.pl'),
   // Dodane: Hreflang dla Polski
   alternates: {
     languages: {
-      'pl-PL': 'https://zeniula.pl',
+      'pl-PL': 'https://www.zeniula.pl',
     },
   },
   openGraph: {
     title: 'Zeniula · UGC Creator Polska',
     description: 'Tworzę treści UGC, które sprzedają. Beauty, lifestyle, fashion. Polska.',
-    url: 'https://zeniula.pl',
+    url: 'https://www.zeniula.pl',
     siteName: 'Zeniula UGC Creator',
     images: [
       {
@@ -53,7 +53,7 @@ export default function RootLayout({
     "@type": "Person",
     "name": "Zeniula",
     "jobTitle": "UGC Content Creator",
-    "url": "https://zeniula.pl",
+    "url": "https://www.zeniula.pl",
     "sameAs": [
       "https://tiktok.com/@zeniula",
       "https://instagram.com/zeeniula"

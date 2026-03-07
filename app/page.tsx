@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   keywords: 'UGC portfolio Polska, UGC beauty creator, content creator fashion, unboxing Polska, TikTok UGC',
   // Canonical dla głównej strony
   alternates: {
-    canonical: 'https://zeniula.pl',
+    canonical: 'https://www.zeniula.pl',
   },
   openGraph: {
     title: 'Zeniula UGC Portfolio',
     description: 'Przykłady moich realizacji UGC dla marek beauty i lifestyle.',
-    url: 'https://zeniula.pl',
+    url: 'https://www.zeniula.pl',
     type: 'website',
   },
 };
