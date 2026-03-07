@@ -7,22 +7,58 @@ export async function POST(req: Request) {
   const { name, email, message } = await req.json();
 
   try {
+    // Mail 1: DO ZENIULI (pełna wiadomość)
     await resend.emails.send({
-      from: 'Zeniula <onboarding@resend.dev>',  // test, zmień po domenie
+      from: 'Zeniula UGC <onboarding@resend.dev>',  // Nazwa + fallback
       to: 'zeniula.ugc@gmail.com',
       replyTo: email,
-      subject: `Nowa wiadomość od ${name}`,
+      subject: `📩 Nowa wiadomość z portfolio: ${name}`,
       html: `
-        <h2>Nowa wiadomość z portfolio</h2>
-        <p><strong>Imię:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Wiadomość:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
+        <div style="max-width: 600px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #333;">
+          <h1 style="color: #6d1030; font-size: 28px;">Nowa wiadomość z zeniula.pl</h1>
+          <div style="background: #fdf8f3; padding: 20px; border-radius: 8px; border-left: 4px solid #8B1538;">
+            <p><strong>👤 Imię:</strong> ${name}</p>
+            <p><strong>📧 Email:</strong> ${email}</p>
+            <p><strong>💬 Wiadomość:</strong></p>
+            <div style="background: white; padding: 16px; border-radius: 6px; border-left: 3px solid #8B1538; margin: 12px 0;">
+              ${message.replace(/\n/g, '<br>')}
+            </div>
+          </div>
+          <hr style="border: none; border-top: 1px solid #eee; margin: 24px 0;">
+          <p style="font-size: 14px; color: #666;">
+            <a href="https://www.zeniula.pl" style="color: #8B1538; text-decoration: none;">www.zeniula.pl</a> | UGC Creator
+          </p>
+        </div>
       `,
     });
-    return NextResponse.json({ ok: true });
+
+    // Mail 2: DO KLIENTA (potwierdzenie)
+    await resend.emails.send({
+      from: 'Zeniula UGC <onboarding@resend.dev>',
+      to: email,
+      subject: 'Dziękujemy za wiadomość! 👋 Odezwę się wkrótce',
+      html: `
+        <div style="max-width: 500px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #333;">
+          <h1 style="color: #6d1030;">Cześć ${name}! 👋</h1>
+          <p>Dziękuję za wiadomość z mojego portfolio. Obejrzałam ją i <strong>odezwę się do Ciebie najpóźniej w ciągu 24h</strong>.</p>
+          <p>📝 Twoja wiadomość: "${message.substring(0, 100)}..."</p>
+          <hr style="border: none; border-top: 1px solid #eee;">
+          <p style="font-size: 14px; color: #666;">
+            Pozdrawiam,<br>
+            <strong>Zeniula</strong><br>
+            UGC Creator | Beauty & Lifestyle<br>
+            <a href="https://www.zeniula.pl" style="color: #8B1538;">www.zeniula.pl</a>
+          </p>
+        </div>
+      `,
+    });
+
+    return NextResponse.json({ ok: true, message: 'Wiadomość wysłana! Dziękujemy.' });
   } catch (error) {
-    console.error(error);
-    return NextResponse.json({ ok: false }, { status: 500 });
+    console.error('Resend error:', error);
+    return NextResponse.json({ 
+      ok: false, 
+      message: 'Błąd wysyłania. Spróbuj ponownie za chwilę.' 
+    }, { status: 500 });
   }
 }
