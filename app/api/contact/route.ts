@@ -51,14 +51,15 @@ export async function POST(req: Request) {
           </p>
         </div>
       `,
+      console.log(`Wysyłam do Zeniuli: ${name} <${email}>`);
+      await resend.emails.send({ /* Zeniula */ });
+      console.log('✅ Zeniula wysłana');
+      
+      console.log(`Wysyłam do klienta: ${email}`);
+      await resend.emails.send({ /* Klient */ });
+      console.log('✅ Klient wysłany');
     });
-    console.log(`Wysyłam do Zeniuli: ${name} <${email}>`);
-    await resend.emails.send({ /* Zeniula */ });
-    console.log('✅ Zeniula wysłana');
-    
-    console.log(`Wysyłam do klienta: ${email}`);
-    await resend.emails.send({ /* Klient */ });
-    console.log('✅ Klient wysłany');
+
     
     return NextResponse.json({ ok: true, message: 'Wiadomość wysłana! Dziękujemy.' });
   } catch (error) {
