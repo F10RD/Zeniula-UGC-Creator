@@ -201,7 +201,7 @@ export type PortfolioItem = {
   title: string;
   brand: string;
   type: string;
-  image: string;
+  image: string | null;
   videoUrl: string | null;
   videoType: VideoType;
 };
