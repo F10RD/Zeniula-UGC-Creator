@@ -6,12 +6,17 @@ import SmoothScroll from '@/components/SmoothScroll';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Zeniula | UGC Creator Polska - Beauty Lifestyle Fashion',
-  description: 'Autentyczne treści UGC dla marek beauty, lifestyle, fashion. Unboxing, recenzje, TikTok/Instagram Reels. Polska UGC Creator.',
-  keywords: 'UGC creator Polska, content creator beauty, UGC fashion Polska, unboxing kosmetyki, recenzje produktów',
   metadataBase: new URL('https://www.zeniula.pl'),
   
-  // ✅ FAVICON + PWA – DODANE!
+  // ✅ BAZOWE METADANE (już miałeś)
+  title: {
+    default: 'Zeniula UGC Creator - Beauty, lifestyle, fashion',
+    template: '%s | Zeniula UGC Creator' // dla podstron
+  },
+  description: 'Tworzę treści UGC, które sprzedają. Beauty, lifestyle, fashion.',
+  keywords: 'UGC creator Polska, content creator beauty, UGC fashion Polska, unboxing kosmetyki, recenzje produktów',
+  
+  // ✅ FAVICON + PWA (już miałeś - OK!)
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
@@ -20,22 +25,24 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
-  manifest: '/site.webmanifest',  // PWA Android/iOS
+  manifest: '/site.webmanifest',
   
-  // Dodane: Hreflang dla Polski
+  // ✅ HREFLANG (już miałeś - OK!)
   alternates: {
     languages: {
       'pl-PL': 'https://www.zeniula.pl',
     },
   },
+  
+  // ✅ OPEN GRAPH - ZMIENIONE TYTUŁY NA TWOJE ŻYCZENIE [web:128]
   openGraph: {
-    title: 'Zeniula · UGC Creator Polska',
-    description: 'Tworzę treści UGC, które sprzedają. Beauty, lifestyle, fashion. Polska.',
+    title: 'Zeniula UGC Creator - Beauty, lifestyle, fashion',
+    description: 'Tworzę treści UGC, które sprzedają. Beauty, lifestyle, fashion.',
     url: 'https://www.zeniula.pl',
     siteName: 'Zeniula UGC Creator',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.jpg', // ← MUSI BYĆ W public/
         width: 1200,
         height: 630,
         alt: 'Zeniula UGC Creator - Beauty Lifestyle Fashion Polska',
@@ -44,14 +51,18 @@ export const metadata: Metadata = {
     locale: 'pl_PL',
     type: 'website',
   },
+  
+  // ✅ TWITTER - ZMIENIONE TYTUŁY [web:130]
   twitter: {
     card: 'summary_large_image',
-    title: 'Zeniula · UGC Creator Polska',
-    description: 'Autentyczne treści UGC dla marek. Beauty & lifestyle.',
+    title: 'Zeniula UGC Creator - Beauty, lifestyle, fashion',
+    description: 'Tworzę treści UGC, które sprzedają. Beauty, lifestyle, fashion.',
     images: ['/og-image.jpg'],
   },
+  
+  // ✅ GOOGLE VERIFY (już miałeś)
   verification: {
-    google: 'google-site-verification=[TU_WKLEJ_PO_GSC]',  // Później!
+    google: 'google-site-verification=[TU_WKLEJ_PO_GSC]',
   },
 };
 
