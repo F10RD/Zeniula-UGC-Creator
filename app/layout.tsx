@@ -10,6 +10,18 @@ export const metadata: Metadata = {
   description: 'Autentyczne treści UGC dla marek beauty, lifestyle, fashion. Unboxing, recenzje, TikTok/Instagram Reels. Polska UGC Creator.',
   keywords: 'UGC creator Polska, content creator beauty, UGC fashion Polska, unboxing kosmetyki, recenzje produktów',
   metadataBase: new URL('https://www.zeniula.pl'),
+  
+  // ✅ FAVICON + PWA – DODANE!
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico' }
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',  // PWA Android/iOS
+  
   // Dodane: Hreflang dla Polski
   alternates: {
     languages: {
