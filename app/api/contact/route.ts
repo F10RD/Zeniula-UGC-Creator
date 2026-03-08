@@ -9,7 +9,7 @@ export async function POST(req: Request) {
   try {
     // Mail 1: DO ZENIULI (pełna wiadomość)
     await resend.emails.send({
-      from: 'Zeniula UGC <onboarding@resend.dev>',  // Nazwa + fallback
+      from: 'Zeniula UGC <kontakt@zeniula.pl>',  // Nazwa + fallback
       to: 'zeniula.ugc@gmail.com',
       replyTo: email,
       subject: `📩 Nowa wiadomość z portfolio: ${name}`,
@@ -36,7 +36,7 @@ export async function POST(req: Request) {
     // Mail 2: DO KLIENTA (potwierdzenie)
     console.log('📤 Wysyłam do klienta:', { to: email });
     await resend.emails.send({
-      from: 'Zeniula UGC <onboarding@resend.dev>',
+      from: 'Zeniula UGC <kontakt@zeniula.pl>',
       to: email,
       subject: 'Dziękujemy za wiadomość! 👋 Odezwę się wkrótce',
       html: `
