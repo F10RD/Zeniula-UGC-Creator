@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zeniula | UGC Creator Portfolio - Beauty & Lifestyle Polska',
+  title: 'Zeniula | UGC Creator - Beauty & Lifestyle Polska',
   description: 'Moje realizacje UGC: unboxing kosmetyki, recenzje produktów, TikTok Reels dla marek beauty i fashion. Skontaktuj się!',
   keywords: 'UGC portfolio Polska, UGC beauty creator, content creator fashion, unboxing Polska, TikTok UGC',
   // Canonical dla głównej strony
