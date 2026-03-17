@@ -82,7 +82,7 @@ export const siteConfig = {
   // Video w sekcji "O mnie" (pod zdjęciem)
   // null   = pokazuje placeholder "wkrótce"
   // 'link' = pokazuje prawdziwe video
-  aboutVideoUrl: null as string | null,
+  aboutVideoUrl: 'https://player.vimeo.com/video/1174514660',
   // Przykład: aboutVideoUrl: 'https://www.youtube.com/embed/ABC123',
 
   // ----------------------------------------------------------
@@ -236,6 +236,15 @@ export const portfolioItems: PortfolioItem[] = [
     type: 'Recenzja produktu',
     image: null,
     videoUrl: 'https://player.vimeo.com/video/1169341166',
+    videoType: 'vimeo',
+  },
+  {
+    id: 4,
+    title: 'Set do Ćwiczeń',
+    brand: 'Carpatree',
+    type: 'Recenzja produktu',
+    image: null,
+    videoUrl: 'https://player.vimeo.com/video/1173962882',
     videoType: 'vimeo',
   },
 ];
