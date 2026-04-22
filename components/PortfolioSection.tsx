@@ -82,20 +82,26 @@ export default function PortfolioSection() {
                 } ${work.videoUrl ? 'cursor-pointer' : 'cursor-default'}`}
               >
                 {/* Miniatura */}
-                <img
-                  src={thumbnail}
-                  alt={work.title}
-                  loading="lazy"
-                  className={`absolute inset-0 w-full h-full transition-transform duration-500 ${
-                    work.videoType === 'vimeo'
-                      ? 'object-contain bg-black/5'
-                      : 'object-cover group-hover:scale-105'
+                <div
+                  className={`absolute inset-x-0 top-0 ${
+                    work.videoType === 'vimeo' ? 'h-[78%]' : 'h-full'
                   }`}
-                />
+                >
+                  <img
+                    src={thumbnail}
+                    alt={work.title}
+                    loading="lazy"
+                    className={`w-full h-full transition-transform duration-500 ${
+                      work.videoType === 'vimeo'
+                        ? 'object-cover'
+                        : 'object-cover group-hover:scale-105'
+                    }`}
+                  />
+                </div>
 
                 {/* Badge platformy */}
                 {badge && (
-                  <div className="absolute top-3 right-3">
+                  <div className="absolute top-3 right-3 z-10">
                     <span
                       className={`${badge.bg} text-white text-xs font-sans font-medium px-2 py-1 rounded-full`}
                     >
@@ -106,7 +112,7 @@ export default function PortfolioSection() {
 
                 {/* Play button */}
                 {work.videoUrl && (
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="absolute inset-0 flex items-center justify-center z-10">
                     <div className="w-14 h-14 rounded-full bg-white/60 backdrop-blur-sm flex items-center justify-center group-hover:bg-burgundy-500 transition-all duration-300 shadow-lg">
                       <svg
                         className="w-6 h-6 text-burgundy-500 group-hover:text-white ml-1 transition-colors"
@@ -120,7 +126,7 @@ export default function PortfolioSection() {
                 )}
 
                 {/* Overlay info */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-burgundy-700/80 to-transparent translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                <div className="absolute bottom-0 left-0 right-0 z-10 p-4 bg-gradient-to-t from-burgundy-700/80 to-transparent">
                   <span className="text-xs text-rose-blush font-sans tracking-wider uppercase">
                     {work.type}
                   </span>
