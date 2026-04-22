@@ -86,7 +86,12 @@ export default function PortfolioSection() {
                   src={thumbnail}
                   alt={work.title}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  style={
+                    work.videoType === 'vimeo'
+                      ? { objectPosition: 'center 18%' }
+                      : undefined
+                  }
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
                 {/* Badge platformy */}
