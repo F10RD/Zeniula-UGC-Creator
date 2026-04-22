@@ -205,23 +205,58 @@ export type PortfolioItem = {
   videoUrl: string | null;
   videoType: VideoType;
 };
-
+    // Gdy dodasz video:
+    // image: '/thumbnails/beauty-unboxing.webp',
+    // videoUrl: 'https://www.tiktok.com/embed/v2/1234567890',
+    // videoType: 'tiktok',
 export const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
+    title: 'Koszulka Stranger Things',
+    brand: 'Fandomstore',
+    type: 'Recenzja produktu',
+    image: null,
+    videoUrl: 'https://player.vimeo.com/video/1185287347',
+    videoType: 'vimeo',
+  },
+  {
+    id: 2,
+    title: 'Pędząca kaczka',
+    brand: 'DUMEL',
+    type: 'Recenzja produktu',
+    image: null,
+    videoUrl: 'https://player.vimeo.com/video/1185533267',
+    videoType: 'vimeo',
+  },
+  {
+    id: 3,
+    title: 'Książka 500w1',
+    brand: 'Autor Patryk Barburski',
+    type: 'Recenzja produktu',
+    image: null,
+    videoUrl: 'https://player.vimeo.com/video/1185291366',
+    videoType: 'vimeo',
+  },
+  {
+    id: 4,
+    title: 'Książka 500w1',
+    brand: 'Autor Patryk Barburski',
+    type: 'Video UGC',
+    image: null,
+    videoUrl: 'https://player.vimeo.com/video/1185289541',
+    videoType: 'vimeo',
+  },
+  {
+    id: 5,
     title: 'Nosidełko dla dziecka',
     brand: 'Lennylamb',
     type: 'Recenzja produktu',
     image: null,
     videoUrl: 'https://player.vimeo.com/video/1169339688',
     videoType: 'vimeo',
-    // Gdy dodasz video:
-    // image: '/thumbnails/beauty-unboxing.webp',
-    // videoUrl: 'https://www.tiktok.com/embed/v2/1234567890',
-    // videoType: 'tiktok',
   },
   {
-    id: 2,
+    id: 6,
     title: 'Puder Taft',
     brand: 'Schwarzkopf',
     type: 'Recenzja produktu',
@@ -230,7 +265,8 @@ export const portfolioItems: PortfolioItem[] = [
     videoType: 'vimeo',
   },
   {
-    id: 3,
+
+    id: 7,
     title: 'Odkrywczy Domek',
     brand: 'Dumel',
     type: 'Recenzja produktu',
@@ -239,7 +275,8 @@ export const portfolioItems: PortfolioItem[] = [
     videoType: 'vimeo',
   },
   {
-    id: 4,
+
+    id: 8,
     title: 'Set do Ćwiczeń',
     brand: 'Carpatree',
     type: 'Recenzja produktu',
