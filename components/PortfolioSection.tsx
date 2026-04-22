@@ -77,21 +77,16 @@ export default function PortfolioSection() {
                     });
                   }
                 }}
-                className={`group relative aspect-[4/5] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
-                  work.videoUrl ? 'cursor-pointer' : 'cursor-default'
-                }`}
+                className={`group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
+                  work.videoType === 'vimeo' ? 'aspect-[9/16]' : 'aspect-[4/5]'
+                } ${work.videoUrl ? 'cursor-pointer' : 'cursor-default'}`}
               >
                 {/* Miniatura */}
                 <img
                   src={thumbnail}
                   alt={work.title}
                   loading="lazy"
-                  style={
-                    work.videoType === 'vimeo'
-                      ? { objectPosition: 'center 18%' }
-                      : undefined
-                  }
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
 
                 {/* Badge platformy */}
