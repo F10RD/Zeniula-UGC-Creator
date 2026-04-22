@@ -78,22 +78,18 @@ export default function PortfolioSection() {
                   }
                 }}
                 className={`group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
-                  work.videoType === 'vimeo' ? 'aspect-[9/16]' : 'aspect-[4/5]'
+                  work.videoType === 'vimeo' ? 'aspect-[9/16] bg-nude-200' : 'aspect-[4/5]'
                 } ${work.videoUrl ? 'cursor-pointer' : 'cursor-default'}`}
               >
                 {/* Miniatura */}
-                <div
-                  className={`absolute inset-x-0 top-0 ${
-                    work.videoType === 'vimeo' ? 'h-[78%]' : 'h-full'
-                  }`}
-                >
+                <div className="absolute inset-0">
                   <img
                     src={thumbnail}
                     alt={work.title}
                     loading="lazy"
                     className={`w-full h-full transition-transform duration-500 ${
                       work.videoType === 'vimeo'
-                        ? 'object-cover'
+                        ? 'object-contain'
                         : 'object-cover group-hover:scale-105'
                     }`}
                   />
