@@ -82,7 +82,10 @@ export default function PortfolioSection() {
                 } ${work.videoUrl ? 'cursor-pointer' : 'cursor-default'}`}
               >
                 {/* Miniatura */}
-                <div className="absolute inset-0">
+                <div
+                  className={`absolute inset-x-0 top-0 ${
+                    work.videoType === 'vimeo' ? 'h-[78%]' : 'h-full'
+                  }`}>
                   <img
                     src={thumbnail}
                     alt={work.title}
