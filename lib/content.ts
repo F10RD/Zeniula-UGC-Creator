@@ -230,6 +230,15 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 3,
+    title: 'Kosmetyki od Fluff',
+    brand: 'Fluff',
+    type: 'Unboxing',
+    image: null,
+    videoUrl: 'https://player.vimeo.com/video/1191420237',
+    videoType: 'vimeo',
+  },
+  {
+    id: 4,
     title: 'Książka 500w1',
     brand: 'Autor Patryk Barburski',
     type: 'Recenzja produktu',
@@ -238,7 +247,7 @@ export const portfolioItems: PortfolioItem[] = [
     videoType: 'vimeo',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Książka 500w1',
     brand: 'Autor Patryk Barburski',
     type: 'Video UGC',
@@ -247,7 +256,7 @@ export const portfolioItems: PortfolioItem[] = [
     videoType: 'vimeo',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Nosidełko dla dziecka',
     brand: 'Lennylamb',
     type: 'Recenzja produktu',
@@ -256,7 +265,7 @@ export const portfolioItems: PortfolioItem[] = [
     videoType: 'vimeo',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Puder Taft',
     brand: 'Schwarzkopf',
     type: 'Recenzja produktu',
@@ -266,7 +275,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
 
-    id: 7,
+    id: 8,
     title: 'Odkrywczy Domek',
     brand: 'Dumel',
     type: 'Recenzja produktu',
@@ -276,7 +285,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
 
-    id: 8,
+    id: 9,
     title: 'Set do Ćwiczeń',
     brand: 'Carpatree',
     type: 'Recenzja produktu',
